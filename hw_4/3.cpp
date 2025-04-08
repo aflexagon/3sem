@@ -22,10 +22,22 @@ int main() {
 		auto last_changes = std::filesystem::last_write_time(entity.path());
 		//convert to yy_mm_dd
 		year_month_day format_date{ floor < days >(clock_cast<system_clock>(last_changes)) };
+		//definition of file type
+		std::string type;
+		if (std::filesystem::is_directory(entity)) {
+			type = "Directory";
+		}
+		else if (std::filesystem::is_regular_file(entity)) {
+			type = "File";
+		}
+		else {
+			type = "Other";
+		}
 		//standard output stream
-		std::cout << '\n'    <<
-			"File name: "	 << entity.path().filename() .string() << std::endl <<
-			"Type: "		 << entity.path().extension().string() << std::endl <<
+		std::cout << '\n' <<
+			"File name: "	 << entity.path().filename().string()  << std::endl <<
+			"Type: "		 << type							   << std::endl	<<
+			"Extension: "	 << entity.path().extension().string() << std::endl <<
 			"Last changes: " << format_date << std::endl;
 	}
 }

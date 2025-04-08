@@ -1,0 +1,28 @@
+{
+    "courses": [
+        {
+            "discipline": "Physics: optics",
+            "exam": true,
+            "lab_hours": 60,
+            "lecture_hours": 30,
+            "self_study_hours": 90,
+            "seminar_hours": 30
+        },
+        {
+            "discipline": "Math analysis",
+            "exam": true,
+            "lab_hours": 0,
+            "lecture_hours": 30,
+            "self_study_hours": 45,
+            "seminar_hours": 30
+        },
+        {
+            "discipline": "Practice programming using C++",
+            "exam": false,
+            "lab_hours": 60,
+            "lecture_hours": 15,
+            "self_study_hours": 105,
+            "seminar_hours": 0
+        }
+    ]
+}
